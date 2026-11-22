@@ -1,0 +1,9 @@
+{
+  "name": "marketbridge-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MarketBridge market-data API proxy (demo-safe; no order execution)",
+  "main": "server.cjs",
+  "scripts": { "start": "node server.cjs", "dev": "node --watch server.cjs" },
+  "dependencies": { "cors": "^2.8.5", "dotenv": "^16.4.7", "express": "^4.21.2" }
+}
