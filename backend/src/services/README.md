@@ -1,0 +1,1 @@
+Application workflows belong here: onboarding state transitions, investor summaries, and portfolio queries.

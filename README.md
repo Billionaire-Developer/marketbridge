@@ -1,15 +1,21 @@
-# MarketBridge — frontend + market-data API
+# MarketBridge brokerage interface prototype
 
-A responsive broker-style dashboard prototype with dedicated Overview, Markets, Portfolio, Wallet, and Transactions screens, searchable asset lists, category filters, watchlists, holdings, demo wallet actions, transaction history, and trade-ticket previews. The project includes an optional backend proxy for market quotes.
+A responsive brokerage-style prototype inspired by approachable investing apps. It starts with a public company website, then guides visitors through sign-up/sign-in and a demo identity-onboarding flow before showing the investor workspace.
 
-## Run it
+## Project layout
+
+- `frontend/` — Vite + React UI, public landing page, demo auth/onboarding, and investor dashboard.
+- `backend/server.cjs` — currently runnable Express API for health and market quote proxy.
+- `backend/src/` — organized future backend modules; see `backend/ARCHITECTURE.md`.
+- `backend/.env.example`, `frontend/.env.example` — environment templates.
+
+## Run locally
 
 Terminal 1:
 ```bash
 cd backend
 npm install
 cp .env.example .env
-# Optional: add FINNHUB_API_KEY to backend/.env for US stock quotes
 npm run dev
 ```
 
@@ -20,8 +26,8 @@ npm install
 npm run dev
 ```
 
-The frontend polls `http://localhost:4000/api/market` every 15 seconds. Binance public market data supplies BTC/ETH/SOL quotes without a key. Finnhub supplies US stock quotes when `FINNHUB_API_KEY` is configured. Otherwise, unavailable quotes remain demo values and the UI reports demo fallback. Set `VITE_API_BASE_URL` in `frontend/.env` if the API is hosted elsewhere.
+## Prototype boundaries
 
-## Important limits
+The public site, account forms, identity onboarding, dashboard balances, portfolio holdings, and transaction views are demonstration UI/data. The sign-up/sign-in forms do not create or authenticate real accounts; onboarding does not transmit or verify identity information. Use synthetic test details only. Do not enter real ID numbers.
 
-This is still a prototype. Only crypto and selected US-stock quote data are connected; Forex, commodities, portfolio values, chart history, balances, activity, and order previews are illustrative. No real orders, deposits, withdrawals, brokerage login, or financial advice are implemented. Market data may be delayed and is subject to provider terms and rate limits. Do not deploy without production security, validation, monitoring, and provider-compliant data licensing.
+No real brokerage account, custody, deposits, withdrawals, or trade execution is connected. The backend currently serves market quotes only; see its README and `ARCHITECTURE.md` for planned module responsibilities. Production identity checks and financial activity require suitable licensed/approved providers, security controls, regulatory review, and data licensing. Company notes are informational, not investment advice.

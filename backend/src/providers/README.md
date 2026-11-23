@@ -1,0 +1,1 @@
+Provider adapters belong here. Use approved providers and keep provider-specific APIs behind interfaces.

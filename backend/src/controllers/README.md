@@ -1,0 +1,1 @@
+Translate HTTP requests into service calls and consistent responses. Keep domain rules in services/domain modules.

@@ -1,0 +1,1 @@
+Core entities and business rules: users, investor profiles, instruments, holdings, and orders.

@@ -1,0 +1,1 @@
+Shared security and request middleware: authentication, authorization, rate limiting, validation, and error handling.

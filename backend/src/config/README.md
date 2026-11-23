@@ -1,0 +1,1 @@
+Environment schema and provider configuration belong here. Validate required secrets at startup; never commit `.env` files.
